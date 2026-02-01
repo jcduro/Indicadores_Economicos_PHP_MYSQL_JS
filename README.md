@@ -64,28 +64,28 @@ are temporarily unavailable.  This script is designed for simple integration and
 
     ```sql
 
-CREATE TABLE `indicadores` (
-  `id` int(11) NOT NULL,
-  `codigo` varchar(20) NOT NULL,
-  `nombre` varchar(50) NOT NULL,
-  `valor` float(18,4) NOT NULL,
-  `unidad` varchar(20) NOT NULL,
-  `fecha` date NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
---
--- Volcado de datos para la tabla `indicadores`
---
-
-INSERT INTO `indicadores` (`id`, `codigo`, `nombre`, `valor`, `unidad`, `fecha`) VALUES
-(1, 'USD_COP', 'Dólar TRM', 3667.6863, 'COP', '0000-00-00'),
-(2, 'EUR_COP', 'Euro', 4397.0566, 'COP', '0000-00-00'),
-(3, 'ORO_USD', 'Oro', 2000.0000, 'USD/oz', '2026-02-01'),
-(4, 'BRENT_USD', 'Petróleo Brent', 85.0000, 'USD/barril', '2026-02-01'),
-(5, 'BTC_USD', 'Bitcoin', 76441.0000, 'USD', '2026-02-01'),
-(6, 'SP500_USD', 'S&P 500', 5500.0000, 'pts', '2026-01-17'),
-(7, 'NASDAQ_USD', 'Nasdaq', 18000.0000, 'pts', '2026-01-17'),
-(8, 'FED_RATE', 'Tasa FED', 5.5000, '%', '2026-01-17');
+      CREATE TABLE `indicadores` (
+        `id` int(11) NOT NULL,
+        `codigo` varchar(20) NOT NULL,
+        `nombre` varchar(50) NOT NULL,
+        `valor` float(18,4) NOT NULL,
+        `unidad` varchar(20) NOT NULL,
+        `fecha` date NOT NULL
+      ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+      
+      --
+      -- Volcado de datos para la tabla `indicadores`
+      --
+      
+      INSERT INTO `indicadores` (`id`, `codigo`, `nombre`, `valor`, `unidad`, `fecha`) VALUES
+      (1, 'USD_COP', 'Dólar TRM', 3667.6863, 'COP', '0000-00-00'),
+      (2, 'EUR_COP', 'Euro', 4397.0566, 'COP', '0000-00-00'),
+      (3, 'ORO_USD', 'Oro', 2000.0000, 'USD/oz', '2026-02-01'),
+      (4, 'BRENT_USD', 'Petróleo Brent', 85.0000, 'USD/barril', '2026-02-01'),
+      (5, 'BTC_USD', 'Bitcoin', 76441.0000, 'USD', '2026-02-01'),
+      (6, 'SP500_USD', 'S&P 500', 5500.0000, 'pts', '2026-01-17'),
+      (7, 'NASDAQ_USD', 'Nasdaq', 18000.0000, 'pts', '2026-01-17'),
+      (8, 'FED_RATE', 'Tasa FED', 5.5000, '%', '2026-01-17');
 
     ```
 
