@@ -51,8 +51,6 @@ are temporarily unavailable.  This script is designed for simple integration and
 
 ---
 
-![Screenshot of the PHP Script Output](placeholder_screenshot.png)  *(Replace `placeholder_screenshot.png` with an actual screenshot of the script's output)*
-
 ## ⚙️ Base de Datos (Database)
 
 *   **Database:** MySQL / MariaDB (Recommended)
@@ -65,18 +63,38 @@ are temporarily unavailable.  This script is designed for simple integration and
     **Example SQL:**
 
     ```sql
-    CREATE TABLE indicadores (
-        codigo VARCHAR(20) PRIMARY KEY,
-        valor DECIMAL(10, 2),
-        fecha DATE
-    );
+
+CREATE TABLE `indicadores` (
+  `id` int(11) NOT NULL,
+  `codigo` varchar(20) NOT NULL,
+  `nombre` varchar(50) NOT NULL,
+  `valor` float(18,4) NOT NULL,
+  `unidad` varchar(20) NOT NULL,
+  `fecha` date NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Volcado de datos para la tabla `indicadores`
+--
+
+INSERT INTO `indicadores` (`id`, `codigo`, `nombre`, `valor`, `unidad`, `fecha`) VALUES
+(1, 'USD_COP', 'Dólar TRM', 3667.6863, 'COP', '0000-00-00'),
+(2, 'EUR_COP', 'Euro', 4397.0566, 'COP', '0000-00-00'),
+(3, 'ORO_USD', 'Oro', 2000.0000, 'USD/oz', '2026-02-01'),
+(4, 'BRENT_USD', 'Petróleo Brent', 85.0000, 'USD/barril', '2026-02-01'),
+(5, 'BTC_USD', 'Bitcoin', 76441.0000, 'USD', '2026-02-01'),
+(6, 'SP500_USD', 'S&P 500', 5500.0000, 'pts', '2026-01-17'),
+(7, 'NASDAQ_USD', 'Nasdaq', 18000.0000, 'pts', '2026-01-17'),
+(8, 'FED_RATE', 'Tasa FED', 5.5000, '%', '2026-01-17');
+
     ```
 
 ## ⚙️ Configuración (Configuration)
 
-1.  **Obtén una API Key:** You'll need a free API key from ExchangeRate-API ([https://www.exchangerate-api.com/](https://www.exchangerate-api.com/)).  You'll also need a CoinGecko API key ([https://pro.coingecko.com/api/documentation](https://pro.coingecko.com/api/documentation)).
-2.  **Reemplaza `TU_KEY_AQUI`:** In the PHP code, replace the placeholder `'TU_KEY_AQUI'` with your actual API key.  Make sure to save the file.
-3.  **Database Credentials:**  Configure your database connection details (host, username, password, database name) in the PHP code.
+1.  **Obtén una API Key:** You'll need a free API key from ExchangeRate-API ([https://www.exchangerate-api.com/](https://www.exchangerate-api.com/)).
+2.  You'll also need a CoinGecko API key ([https://pro.coingecko.com/api/documentation](https://pro.coingecko.com/api/documentation)).
+3.  **Reemplaza `TU_KEY_AQUI`:** In the PHP code, replace the placeholder `'TU_KEY_AQUI'` with your actual API key.  Make sure to save the file.
+4.  **Database Credentials:**  Configure your database connection details (host, username, password, database name) in the PHP code.
 
 ## 🚀 Cómo Ejecutar (How to Run)
 
@@ -90,20 +108,13 @@ are temporarily unavailable.  This script is designed for simple integration and
 
 We welcome contributions to this project!  If you have any ideas, bug reports, or pull requests, please submit them through GitHub.
 
-## 🙏 Licencia (License)
 
-This project is licensed under the MIT License - see the [LICENSE](https://github.com/yourusername/yourrepository/blob/main/LICENSE) file for details.
+--- 
+
+## 📄 Licencia
+Libre, usalo como quieras
+<div align="center">
+  Hecho con 💙 y neones
+</div>
 
 ---
-
-**Important Notes:**
-
-*   **Replace Placeholders:** Fill in the bracketed placeholders with accurate information.
-*   **API Keys:**  Never commit your API keys directly to your repository.  Use environment variables or a configuration file to store them securely.
-*   **Scheduling:** The script doesn't include scheduling.  You'll need to set up a task scheduler (cron on Linux/macOS, Task Scheduler on Windows) to run it automatically.
-*   **Error Logging:**  Consider adding more detailed error logging to a file for easier troubleshooting.
-*   **Security:**  This is a simple example.  For production environments, you'll need to implement additional security measures (e.g., input validation, output escaping, database security).
-
-To create the placeholder screenshot, simply save the above markdown to a file named `README.md` in your repository.
-
-I've used Markdown formatting to create a nicely formatted README. Remember to replace the placeholders with your specific details and update the link to your GitHub repository.  Good luck!
