@@ -1,0 +1,55 @@
+
+/* ------------------------------------------------------------------------------------------------
+
+     |  ___|  __ \  |   |  _ \   _ \   
+     | |      |   | |   | |   | |   |  
+ \   | |      |   | |   | __ <  |   |  
+\___/ \____| ____/ \___/ _| \_\\___/   
+                                       
+  ___|  _ \  __ \  ____|    _ )   _ _| __ \  ____|    \     ___|  
+ |     |   | |   | __|     _ \ \   |  |   | __|     _ \  \___ \  
+ |     |   | |   | |      ( `  <   |  |   | |      ___ \       | 
+\____|\___/ ____/ _____| \___/\/ ___|____/ _____|_/    _\_____/  
+
+  https://jcduro.bexartideas.com/index.php | 2026 | JC Duro Code & Ideas
+
+------------------------------------------------------------------------------------------------ */
+
+
+
+
+
+.neon-card {
+  background: #050b1a;
+  border-radius: 14px;
+  border: 1px solid #00f2ff55;
+  box-shadow: 0 0 18px #00eaff33;
+  padding: 1.2rem 1.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s;
+}
+.neon-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 0 28px #00f2ff66;
+  border-color: #00f2ff;
+}
+.neon-icon {
+  color: #00f2ff;
+  text-shadow: 0 0 12px #00eaffaa;
+}
+.neon-label {
+  color: #8ea4ff;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+.neon-value {
+  color: #e9f3ff;
+  font-weight: 700;
+  font-size: 1.1rem;
+}neon-date {
+  color: #6f86c9;
+  font-size: 0.75rem;
+}
